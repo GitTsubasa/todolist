@@ -7,7 +7,8 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    clean: true
   },
 
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
