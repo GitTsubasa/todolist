@@ -1,0 +1,8 @@
+- webpack bundles all the code into a smaller bundle,
+-> then this bundle needs to be injected into index.html
+-> this is done in the plugins of webpack 
+  plugins: [
+    new HTMLWebpackPlugin({
+      template: './src/index/html'
+    })
+  ],
