@@ -6,3 +6,5 @@
       template: './src/index/html'
     })
   ],
+
+- webpack defaults to port 8080

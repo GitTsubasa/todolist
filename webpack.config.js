@@ -41,4 +41,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'], // This allows you to import JSX files without specifying the extension
   },
+  devServer: {
+    port: 3000,
+  }
 }

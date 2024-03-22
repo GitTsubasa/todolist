@@ -5,15 +5,17 @@
   "main": "server.js",
   "scripts": {
     "start": "webpack serve --open",
+    "backend": "nodemon ./server/server.js",
     "build": "webpack --mode production"
   },
   "author": "futon",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
+    "express": "^4.18.3",
     "http-server": "^14.1.1",
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.2",
+    "pg": "^8.11.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -26,7 +28,7 @@
     "css-loader": "^6.10.0",
     "eslint": "^7.17.0",
     "html-webpack-plugin": "^5.6.0",
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.22",
     "style-loader": "^3.3.4",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
