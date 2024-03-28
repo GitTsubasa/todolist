@@ -17,7 +17,7 @@ const MainContainer = () => {
     fetchData();
   })
 
-  const display = async () => {
+  const submit = async () => {
     const newPost = document.getElementById('textbox').value;
     const postRequest = {
       method: 'POST',
@@ -56,7 +56,7 @@ const MainContainer = () => {
   return (
     <div>
       <input type='text'id='textbox'></input>
-      <button onClick={display}>Submit</button>
+      <button onClick={submit}>Submit</button>
       <PostContainer post={post} setPost={setPost} deletePost={deletePost}/>
     </div>
   )
