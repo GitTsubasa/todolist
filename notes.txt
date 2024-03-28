@@ -8,3 +8,9 @@
   ],
 
 - webpack defaults to port 8080
+- need try catch in the server because it doesn't catch 
+the errors that are connecting from the db
+- have more structures with errors
+> add global error handler, add different error handler for specificity (add 500 error)
+> add 404
+> match the type of the request (ex: make sure it's a string)
