@@ -15,8 +15,8 @@ const getTasks = async (req, res) => {
 const addTasks = async (req, res) => {
   const { task } = req.body;
   try {
-    await pool.query("INSERT INTO todolist (task) VALUES ($1)", [task])
-    res.status(201).json('task added');
+    const results = await pool.query("INSERT INTO todolist (task) VALUES ($1) RETURNING *", [task])
+    res.status(201).json(results.rows[0]);
   } catch (error) {
     res.status(500).json({error: 'Error in addTasks'})
   }
@@ -25,8 +25,8 @@ const addTasks = async (req, res) => {
 const removeTasks = async (req, res) => {
   const id = parseInt(req.params.id);
   try {
-    pool.query("DELETE FROM todolist WHERE id = $1", [id])
-    res.status(201).json('task deleted');
+    await pool.query("DELETE FROM todolist WHERE id = $1", [id])
+    res.status(201).json({message: 'task deleted'});
   } catch (error) {
     res.status(500).json({error: 'Error in addTasks'})
   }

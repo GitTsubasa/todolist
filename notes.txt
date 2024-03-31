@@ -14,3 +14,17 @@ the errors that are connecting from the db
 > add global error handler, add different error handler for specificity (add 500 error)
 > add 404
 > match the type of the request (ex: make sure it's a string)
+
+- be particular about html tags
+- avoid passing from parent to child as much as possible
+- frontend is agnostic, don't update frontend info and backend at the same time
+-> think as if you feeding information to frontend 
+-> unidirectional data flow, starting from the database
+
+hw 
+
+input
+list
+posts
+button
+-> in their own react components
