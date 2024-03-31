@@ -13,7 +13,6 @@ const MainContainer = () => {
     const fetchData = async () => {
       try {
         const response = await fetch ("http://localhost:5000");
-        console.log('getrequest', response);
         const data = await response.json();
         setPosts(data);
       } catch (error) {

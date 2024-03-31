@@ -1,6 +1,6 @@
 import React from "react";
-// pass down props
-const DeleteButton = () => {
+
+const DeleteButton = ({ ele, posts, setPosts }) => {
   const deletePost = async (id) => {
     const deleteRequest = {
       method: 'DELETE',
@@ -11,12 +11,12 @@ const DeleteButton = () => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      const refresh = posts.filter((_, i) =>i !== id);
+      const refresh = posts.filter(post => post.id !== id)
       setPosts(refresh);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
-  }
+  };
   return (
     <button onClick={() => deletePost(ele.id)}>x</button>
   )

@@ -28,3 +28,16 @@ list
 posts
 button
 -> in their own react components
+
+this is how to console log in jsx
+    <ul>
+      {posts.map((ele) => {
+        console.log()
+        return (
+        <li key={ele.id}>
+          {ele.task}
+          <button onClick={() => deletePost(ele.id)}>x</button>
+        </li>
+      )})
+      }
+    </ul>
