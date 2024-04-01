@@ -1,12 +1,11 @@
 import React from "react";
-import DeleteButton from "./buttons/DeleteButton";
+import Button from "./Button";
 
-const PostContainer = ({ ele, posts, setPosts }) => {
+const PostContainer = ({ label, deletePost }) => {
   return (
-    <li key={ele.id}>
-      {ele.id}
-      {ele.task}
-      <DeleteButton posts={posts} setPosts={setPosts} ele={ele}/>
+    <li>
+      {label}
+      <Button label="x" onClick={deletePost}/>
     </li>
   )
 }
